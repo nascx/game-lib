@@ -13,16 +13,19 @@ export default function App() {
   return (
     <div id="app">
       <h1>Game library</h1>
-      <NewGameForm addGame={addGame}/>
+      <NewGameForm addGame={addGame} />
       <div className="games">
-        {games.map((game : GameType ) => (
+        {games.length > 0 ? games.map((game: GameType) => (
           <Game
             key={game.id}
             title={game.title}
             cover={game.cover}
             onRemove={() => removeGame(game.id)}
           />
-        ))}
+        )) : (
+          <h2 style={{margin: "4rem auto"}}>Your list is null. Add some game</h2>
+        )
+        }
       </div>
     </div>
   )

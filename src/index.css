@@ -34,3 +34,10 @@ form {
 input {
   background-color: black;
 }
+
+.games { 
+  margin-top: 3rem;
+  display: flex;
+  gap: 50px;
+  align-items: center;
+}
